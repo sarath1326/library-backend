@@ -507,7 +507,7 @@ router.delete("/cart_delete", (req, res) => {   //cart delete api
 
 
 
-router.post("/place_oder", (req, res) => {  //place oder api 
+router.post("/place_oder",verifiLogin, (req, res) => {  //place oder api 
 
    
     const token = req.body.userid;
@@ -632,7 +632,7 @@ router.post("/verify_pyment", (req, res) => {  //verify online pyment api
 
 
 
-router.post("/single_buy", (req, res) => { //single buy api 
+router.post("/single_buy",verifiLogin, (req, res) => { //single buy api 
 
     
     const token = req.body.userid
